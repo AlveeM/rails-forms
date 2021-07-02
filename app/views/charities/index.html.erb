@@ -1,0 +1,7 @@
+<h1>Charities</h1>
+
+<p><%= link_to "Create New Charity", new_charity_path %></p>
+
+<% @charities.each_with_index do |charity, idx| %>
+  <p><%= idx + 1%>. <%= link_to(charity.name, charity_path(charity)) %> | <%= charity.category %></p>
+<% end %>

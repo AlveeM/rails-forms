@@ -1,0 +1,8 @@
+<h2><%= @charity.name %></h2>
+<p>Category: <%= @charity.category %></p>
+<p>Description: <%= @charity.description %></p>
+<p>Rating: <%= @charity.rating %></p>
+
+<p><%= link_to "Edit", edit_charity_path(@charity) %></p>
+<h3>Danger!</h3>
+<%= button_to "Delete", "/charities/#{@charity.id}", method: :delete %>
